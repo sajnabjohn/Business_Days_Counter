@@ -7,17 +7,17 @@ class NthDayInMonthHoliday implements NthDayMonthHoliday {
     month: number;
   
     constructor(nth: number, day: number, month: number) {
-        this.nth = nth; //2
-        this.day = day; //monday
-        this.month = month; // june
+        this.nth = nth; 
+        this.day = day; 
+        this.month = month; 
     }
     
     isHoliday(date: Date): boolean {
         const firstOfMonth = new Date(date.getFullYear(), this.month - 1, 1); // find the day of the month start
 
-        let daysToAdd = (this.day - firstOfMonth.getDay() + 7) % 7; // Calculate the daysToAdd to reach the first occurrence of 'weekday' in the month
+        let daysToAdd = (this.day - firstOfMonth.getDay() + 7) % 7; // Calculate the daysToAdd to reach the first occurrence of 'day' in the month
 
-        let holidayDate = new Date(date.getFullYear(), this.month - 1, 1 + daysToAdd + (this.nth - 1) * 7); // Calculate the date of the holiday based on the nth occurrence of 'weekday'
+        let holidayDate = new Date(date.getFullYear(), this.month - 1, 1 + daysToAdd + (this.nth - 1) * 7); // Calculate the date of the holiday based on the nth occurrence of 'day'
         
         if (holidayDate.getMonth() !== this.month - 1) { // If the calculated holiday date is in the next month, adjust to the previous nth occurrence
             holidayDate = new Date(date.getFullYear(), this.month - 1, 1 + daysToAdd + (this.nth - 2) * 7);
