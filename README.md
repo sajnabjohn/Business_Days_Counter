@@ -1,4 +1,4 @@
-# New Project
+# Business days counter Project
 
 > ✨ Bootstrapped with Create Snowpack App (CSA).
 
@@ -22,3 +22,8 @@ Your app is ready to be deployed!
 ### Q: What about Eject?
 
 No eject needed! Snowpack guarantees zero lock-in, and CSA strives for the same.
+
+
+### You can define the wide range of holoiday rules in constants.ts file!
+
+Change or add your new holiday inputs in the constants.ts file
