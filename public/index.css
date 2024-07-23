@@ -3,6 +3,7 @@ body {
     font-family: Arial, sans-serif;
     text-align: center;
     margin: 20px;
+    background-color: rgb(237, 237, 210);
 }
 label {
     font-weight: bold;
