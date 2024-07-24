@@ -46,6 +46,5 @@ document.getElementById("table")!.style.display="none";
 const form = document.getElementById("businessDaysForm") as HTMLFormElement | null;
 form?.addEventListener("submit", e =>{
   e.preventDefault();
-  document.getElementById("table")!.style.visibility="none";
   calculateNoOfDays();
 })
